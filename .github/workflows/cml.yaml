@@ -25,4 +25,5 @@ jobs:
           git add report.md metrics.txt
           git commit -m "reports"
           git fetch
+          git pull
           git push 

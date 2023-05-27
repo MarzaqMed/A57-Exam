@@ -96,7 +96,7 @@ if __name__ == "__main__":
 
     # Écrire les scores dans un fichier
     with open("metrics.txt", 'w') as outfile:
-        outfile.write("Accuracy: {}".format(accuracy))
+        outfile.write("Accuracy: {}\n".format(accuracy))
         outfile.write("recall score: {}\n".format(recall_score))
         outfile.write("F1 score: {}\n".format(f1_score))
 
