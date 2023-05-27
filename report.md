@@ -5,3 +5,10 @@ F1 score: 1.0
 Accuracy: 1.0
 recall score: 1.0
 F1 score: 1.0
+## Metriques:
+Data:    Taille(cm)  Poids(kg)  Pointure(cm)
+0         183         59            20
+La classe predite est: ['féminin']
+Accuracy: 1.0
+recall score: 1.0
+F1 score: 1.0
