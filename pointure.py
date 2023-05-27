@@ -83,6 +83,11 @@ if __name__ == "__main__":
     yPredict = gnb.predict(dfToPredict)
     print('La classe predite est : ', yPredict)
 
+    # Inverser la transformation
+    yPredict_inverse = scaler.inverse_transform(yPredict)
+
+    print('La classe prédite inverse est : ', yPredict_inverse)
+
     y_pred = gnb.predict(X_test)
 
     # Évaluation
@@ -96,9 +101,12 @@ if __name__ == "__main__":
 
     # Écrire les scores dans un fichier
     with open("metrics.txt", 'w') as outfile:
+        outfile.write("Data: {}\n".format(dfToPredict))
+        outfile.write("La classe predite est: {}\n".format(yPredict_inverse))
         outfile.write("Accuracy: {}\n".format(accuracy))
         outfile.write("recall score: {}\n".format(recall_score))
         outfile.write("F1 score: {}\n".format(f1_score))
+
 
 
 
