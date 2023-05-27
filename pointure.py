@@ -83,10 +83,10 @@ if __name__ == "__main__":
     yPredict = gnb.predict(dfToPredict)
     print('La classe predite est : ', yPredict)
 
-    # Inverser la transformation
-    yPredict_inverse = scaler.inverse_transform(yPredict)
+    # Utilisez la méthode inverse_transform pour obtenir la transformation inverse
+    yPredict_inverse = label_encoder.inverse_transform(yPredict)
 
-    print('La classe prédite inverse est : ', yPredict_inverse)
+    print('La classe prédite inverse est :', yPredict_inverse)
 
     y_pred = gnb.predict(X_test)
 
